@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Courier New';
+    font-weight: bold;
+    font-style: italic;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    margin-top: -70px;
+    background-color: #9be0fd;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+    font-size: 18px;
+    color: #333;
+}
+
+.navbar button {
+    background-color: peru;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    padding: 15px;
+    position: absolute;
+    right: 5%;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #e3823e;
+    cursor: pointer;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#home {
+    background-image: url('images/travel.jpeg');
+}
+
+#book {
+    background-image: url('images/flight.jpg');
+}
+
+#flight {
+    background-image: url('images/book.jpg');
+}
+
+#posts {
+    background-image: url('images/post.jpg');
+}
+
+.section-content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+}
+
+.catchphrase {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-container input,
+.form-container select {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: peru;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
