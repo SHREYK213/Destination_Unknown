@@ -13,6 +13,7 @@
         <a href="#book">Book</a>
         <a href="#flight">Flight Prices</a>
         <a href="#posts">Posts</a>
+        <a href="#contact">Contact Us</a> <!-- Added "Contact Us" link -->
         <button id="loginButton">Login</button>
     </nav>
     <h1>Destination Unknown</h1>
@@ -34,36 +35,77 @@
                 <input type="number" id="peopleInput" placeholder="Number of people" required>
                 <button id="confirmButton">Confirm</button>
             </div>
+            <div id="confirmationMessage" class="message-container"></div>
         </div>
     </section>
+
+    
     
     <section id="flight" class="section">
         <div class="section-content">
             <h2>Flight Prices</h2>
             <div class="form-container">
-                <select id="startLocationSelect">
-                    <option value="">Select Start Location</option>
-                    <option value="New York">New York</option>
-                    <option value="London">London</option>
-                    <option value="Paris">Paris</option>
-                    <option value="Tokyo">Tokyo</option>
-                </select>
-                <select id="destinationSelect">
-                    <option value="">Select Destination</option>
-                    <option value="New York">New York</option>
-                    <option value="London">London</option>
-                    <option value="Paris">Paris</option>
-                    <option value="Tokyo">Tokyo</option>
-                </select>
+                <input type="text" id="startLocationInput" placeholder="Start Location" required>
+                <input type="text" id="destinationInput" placeholder="Destination" required>
+                <button id="checkButton">Check</button>
+            </div>
+            <p id="flightStatus"></p>
+        </div>
+    </section>
+    
+    
+    <section id="posts" class="section"></section>        
+       
+    </section>
+
+    <section id="contact" class="section">
+        <div class="section-content">
+            <div class="contact-details">
+                <h2>Contact Us</h2>
+                <p>Website: <a href="https://github.com/SHREYK213/">https://github.com/SHREYK213/</a></p>
+                <p>Email: <a href="shreyaspoojary240@gmail.com">shreyaspoojary240@gmail.com</a></p>
+                <p>Portfolio: <a href="https://shreyas-portfolio.onrender.com">https://shreyas-portfolio.onrender.com</a></p>
+            </div>
+            <div class="message-us">
+                <div class="message-box">
+                    <h2>Message Us</h2>
+                    <div class="form-container">
+                        <input type="text" id="messageInput" placeholder="Type your message..." required>
+                        <button id="sendMessageButton">Send Message</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
-    <section id="posts" class="section">
+    <section id="signup-login" class="section">
         <div class="section-content">
-        </div>
+            <h2>Signup/Login</h2>
+            <div id="signupForm">
+                <div class="form-container">
+                    <input type="text" id="nameInputField" placeholder="Name" required>
+                    <input type="text" id="numberInput" placeholder="Number" required>
+                    <input type="email" id="emailInput" placeholder="Email" required>
+                    <input type="password" id="passwordInput" placeholder="Password" required>
+                    <button id="signupButton">Signup</button>
+                </div>
+            </div>
+            <div id="loginForm" style="display: none;">
+                <div class="form-container">
+                    <input type="email" id="loginEmailInput" placeholder="Email" required>
+                    <input type="password" id="loginPasswordInput" placeholder="Password" required>
+                    <button id="safeJourneyButton">Safe Journey</button>
+                </div>
+            </div>
     </section>
     
+    
+    
+    
+    <footer class="footer">
+        <p>&copy; 2023 Destination Unknown. All rights reserved.</p>
+    </footer>
+
 <script src="./script.js"></script>
 </body>
 </html>

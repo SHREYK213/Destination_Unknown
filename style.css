@@ -73,6 +73,32 @@ h1 {
 #posts {
     background-image: url('images/post.jpg');
 }
+.image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+#contact {
+    background-image: url('images/contact_us.jpg');
+}
+
+#signup-login {
+    background-image: url('images/login.jpg');
+
+}
+
 
 .section-content {
     text-align: center;
@@ -86,6 +112,10 @@ h1 {
     margin-bottom: 20px;
 }
 
+.message-container {
+    font-size: 30px; 
+  }
+  
 .form-container {
     display: flex;
     flex-direction: column;
@@ -102,6 +132,86 @@ h1 {
 }
 
 .form-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: peru;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-details a {
+    color: peru;
+  }
+  
+.contact-details, .message-us {
+    flex-basis: 50%;
+}
+
+.contact-details {
+    flex-basis: 50%;
+    padding-right: 20px;
+  }
+
+.contact-details h2, .message-us h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.message-us {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.message-us .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message-us input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 300px;
+    font-size: 16px;
+}
+
+.message-us button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: peru;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.signup-login-container input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.signup-login-container button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: peru;
