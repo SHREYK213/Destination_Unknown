@@ -1,5 +1,7 @@
 body {
+    height: 100%;
     margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -219,4 +221,36 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+.footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-center {
+    text-align: center;
 }
