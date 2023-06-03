@@ -1,3 +1,4 @@
+// navbar query selector
 var navbarLinks = document.querySelectorAll('.navbar a');
 navbarLinks.forEach(function (link) {
     link.addEventListener('click', function (e) {
@@ -11,6 +12,7 @@ navbarLinks.forEach(function (link) {
     });
 });
 
+// confirm button for the book section
 var confirmButton = document.getElementById('confirmButton');
 var confirmationMessage = document.getElementById('confirmationMessage');
 
@@ -28,6 +30,29 @@ confirmButton.addEventListener('click', function () {
     confirmationMessage.innerHTML = message;
 });
 
+// Send Message button
+var sendMessageButton = document.getElementById('sendMessageButton');
+
+sendMessageButton.addEventListener('click', function () {
+    var messageInput = document.getElementById('messageInput');
+    var message = messageInput.value;
+
+    if (message.trim() === '') {
+        alert('Please enter a message.');
+    } else {
+        var successMessage = document.createElement('p');
+        successMessage.textContent = 'Message sent. Thank you for contacting us!';
+        successMessage.style.color = 'white';
+        successMessage.style.backgroundColor = '#49bcff';
+        successMessage.style.padding = '10px';
+        successMessage.style.marginTop = '10px';
+        var section = document.getElementById('contact');
+        section.appendChild(successMessage);
+        messageInput.value = '';
+    }
+});
+
+// login button
 var loginButton = document.getElementById('loginButton');
 loginButton.addEventListener('click', function () {
     var targetSection = document.getElementById('signup-login');
@@ -35,7 +60,7 @@ loginButton.addEventListener('click', function () {
 });
 
 
-
+// Flight price
 var checkButton = document.getElementById('checkButton');
 var flightStatus = document.getElementById('flightStatus');
 
@@ -50,7 +75,7 @@ checkButton.addEventListener('click', function () {
     }
 });
 
-
+// signup 
 var signupButton = document.getElementById('signupButton');
 var safeJourneyButton = document.getElementById('safeJourneyButton');
 
@@ -78,6 +103,8 @@ signupButton.addEventListener('click', function () {
     document.getElementById('loginForm').style.display = 'block';
 });
 
+
+// safejourney button after signup
 safeJourneyButton.addEventListener('click', function () {
     var loginEmail = document.getElementById('loginEmailInput').value;
     var loginPassword = document.getElementById('loginPasswordInput').value;
@@ -87,6 +114,7 @@ safeJourneyButton.addEventListener('click', function () {
 
     if (loginEmail === email && loginPassword === password) {
         console.log("Login successful. Enjoy your safe journey!");
+        window.location.href = 'index.html';
     } else {
         console.log("Invalid login credentials. Please try again.");
     }
@@ -94,3 +122,26 @@ safeJourneyButton.addEventListener('click', function () {
     document.getElementById('loginEmailInput').value = '';
     document.getElementById('loginPasswordInput').value = '';
 });
+
+// Wrap the event listener code in a function and call it immediately
+(function () {
+    safeJourneyButton.addEventListener('click', safeJourneyHandler);
+
+    function safeJourneyHandler() {
+        var loginEmail = document.getElementById('loginEmailInput').value;
+        var loginPassword = document.getElementById('loginPasswordInput').value;
+
+        var email = document.getElementById('emailInput').value;
+        var password = document.getElementById('passwordInput').value;
+
+        if (loginEmail === email && loginPassword === password) {
+            console.log("Login successful. Enjoy your safe journey!");
+            window.location.href = 'index.html';
+        } else {
+            console.log("Invalid login credentials. Please try again.");
+        }
+
+        document.getElementById('loginEmailInput').value = '';
+        document.getElementById('loginPasswordInput').value = '';
+    }
+})();
